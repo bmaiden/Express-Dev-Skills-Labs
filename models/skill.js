@@ -8,7 +8,16 @@ const skills = [
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  deleteOne
+};
+
+function deleteOne(id) {
+  // URL params are strings need to convert to a number as the array has numbers
+  id = parseInt(id);
+  // find the index for the skill
+  const idx = skills.findIndex(skill => skill.id === id);
+  skills.splice(idx, 1);
 };
 
 function create(skill) {
