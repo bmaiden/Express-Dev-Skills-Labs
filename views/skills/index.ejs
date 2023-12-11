@@ -1,5 +1,7 @@
 <%- include('../partials/header') %>
 
+<h3>Skills as of <%= time %></h3>
+
     <ul>
         <% skills.forEach(function(s) { %>
         <li>
@@ -9,5 +11,5 @@
         </li>
         <% }); %>
     </ul>
-
+    <a href="/skills/new">Add Skill</a>
 <%- include('../partials/footer') %>
